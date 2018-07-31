@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="interlocutionThreePage.css">
+  <title>问答详情页</title>
+  <script src="jquery-2.1.0.js"></script>
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+  <script src="interlocutionThreePage.js"></script>
+</head>
+<body>
+<div class="herad_Box">
+  <div class="herad_text" id="herad_text">为什么明明是官方旗舰店，质量却比专柜差很多？网购真能省钱吗？</div>
+  <div class="herad_release">
+    <div class="herad_user_release">用户Katharine发布·</div>
+    <div class="herad_user_release_ImageAndSpan">
+      <img src="image/微信图片_20180711104450.png" alt="#">
+      <span>写回答</span>
+    </div>
+  </div>
+</div>
+<!--用户与内容-->
+<div class="content_userId_Box">
+  <div class="content_userId_imgAndSpan">
+    <div class="content_userId_content_userId_imgAndSpanBox">
+      <img class="content_userId_img" src="image/userImage.jpg" alt="#">
+      <span class="content_userId_span">Tony&nbsp;Wu</span>
+    </div>
+    <input class="content_userId_input" type="button" value="关注">
+  </div>
+  <div class="content_userId_ContentBox">
+    <p id="contents">我们是庚辰龙年出生的跨世纪一代，你们是沐浴在新时代春风中成长的一代。<br><br>我们与新世纪的祖国一路成长，你们与中国的新时代一起圆梦。<br><br>我对我的时代怀有热烈的自信与骄傲，也对你们的时代、我们的未来充满期待。<br><br>我们的时代，是把握机遇的筑梦时代。<br><br>2008年，奥运的火炬在北京鸟巢熊熊燃起，照亮了运动员们朝气蓬勃的脸庞，点燃了泱泱中华的体育精神；<br><br>2013年“天宫一号”首次授课，知识在星际间传递，五星红旗在无垠宇宙中闪亮；<br><br>2016年水乡乌镇举办世界互联网会议，科技与传统的融合，彰显互联网时代的中华风采。<br><br>驼铃悠悠，万里丝绸之路横亘亚欧；<br><br>铁路长长，千里高铁支援异邦弟兄。<br><br>量子信息、青蒿素……中国科技将经验与实验相结合，继承传统，推陈出新，走向世界。<br><br>命运共同体、和平共处互利共赢，中国在发展自身的同时普惠全球，为世界贡献中国智慧、中国力量。<br><br>我们这一代沐浴改革春风，看祖国把握机遇，筑起一个又一个瑰丽雄奇的中国梦。<br><br>我们的时代，是直面挑战的克难时代。<br><br>2008年，汶川大地震无情地夺去几万中华儿女的生命，然而“一方有难，八方支援”，祖国的力量战胜了灾难；<br><br>2013年，落后偏远的乡村通了公路，扶贫向精准深入推动，全面小康不再是遥不可及的梦想。<br><br>诚然，当今时代我们忧心“瘦肉精”损害了胃，我们耻于“中国山寨”，我们不甘处在全球化制造业的低端，但可贵的是，我们拥有直面挑战的勇气，拥有攻坚克难的毅力，我们必当勇往直前。
+    </p>
+  </div>
+  <div class="report">
+    <div class="report_div1">创建于2018-07-08 -->禁止转载</div>
+    <div class="report_div2">
+      <img style="width: 11px;height: 1rem; position: absolute;left: 1.25rem;top: 0.6rem;" src="image/icon_举报@2x.png"
+           alt="#">
+      <span
+        style="width: 2.1rem;height: 1.8rem; display: inline-block; margin-bottom: 0.85rem; font-size: 12px; position: absolute;top: 0; right: 1.2rem;">举报</span>
+    </div>
+  </div>
+</div>
+<!--这是底部栏-->
+<div class="Page_footer_box_userDiv">
+  <div class="Page_footer_box_userDivTop">
+    <img class="title_img" src="image/userImage.jpg" alt="user">
+    <div class="Page_footer_box_userh1Span">
+      <h1>赛先生science</h1>
+      <span>来自West Lafayette,IN</span>
+    </div>
+    <div class="Page_footer_boxImgSpan">
+      <img class="Page_footer_zan" style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+      <b id="Page_footer_zan_b" style="position: absolute; top: 2px; color:#888888;right: 2px;">99</b>
+    </div>
+  </div>
+  <p>给我的感觉是昔日八国联军再出现！西方列强的无理和傲慢与偏见再次出现！对此，我们需要提高警惕～总之一句话～加强我们中国的军队现代化武器现代化，让我们国家更加强大！落后就要挨打，真理！落后就要挨打，真理！</p>
+  <div class="Page_footer_box_spanBtn">
+    <span style="color: #888888;">06-04 15:32</span>
+    <!--<button>33回复</button>-->
+  </div>
+</div>
+<!--定位回答元素-->
+<div class="next_answer">下一个回答</div>
+<!--这是页尾-->
+<div class="is_footer" id="nnn">
+  这是页尾
+</div>
+</body>
+</html>

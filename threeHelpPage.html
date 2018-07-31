@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="threeHelpPage.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+</head>
+<body>
+<!--标注这是页头-->
+<div class="top_of_form">
+  <img src="image/返回.png" alt="#">
+  <div>帮助中心</div>
+</div>
+<!--下划线-->
+<div class="solid_Btoom"></div>
+<!--这是帮助中心内容-->
+<div class="help_Content">
+  <ul class="help_Content_ul">
+    <li>
+      <div>兜市零钱提现到账时间说明</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>兜市零钱发起提现后可以加急处理吗？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>兜市零钱充值成功后什么时候到账？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>兜市零钱充值失败但银行卡已扣费怎么办？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>关于兜市零钱提现收费规则的说明</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>如何将微信零钱提现到银行卡？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>兜市零钱提现是否可以撤销？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>兜市零钱提现成功，账户未到账怎么办？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>兜市零钱提错银行卡怎么办？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+    <li>
+      <div>注册人已逝怎么取出微信零钱资金？</div>
+      <img src="image/返回.png" alt="#">
+    </li>
+  </ul>
+</div>
+<!--这个是下划线34px-->
+<div class="solid_Btoom2"></div>
+<!--底部栏联系客服-->
+<div class="customer">
+  <!--<img src="" alt="#">-->
+  <!--<div>联系客服</div>-->
+  联系客服
+</div>
+</body>
+</html>

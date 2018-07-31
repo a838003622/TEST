@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="mll%20paaise%20Page.css">
+  <title>Praise</title>
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+</head>
+<body>
+<!--页头-->
+<div class="topPraise">
+  <a href="imll%20essay%20Page.html"><img class="topImage" src="image/返回.png" alt="返回标签"></a>
+  <span class="topSpan">点赞</span>
+</div>
+<!--内容页-->
+<div class="Page_footer_box_userDivTopBox">
+  <div class="Page_footer_box_userDivTop">
+    <img class="title_img" src="image/userImage.jpg" alt="user">
+    <div class="Page_footer_box_userh1Span">
+      <h1>赛先生science</h1>
+      <span>来自West Lafayette,IN</span>
+    </div>
+    <div class="Page_footer_boxImgSpan">
+      <img class="Page_footer_zan" style="width: 22px;height: 22px; position: absolute; right: 20px;"
+           src="image/douquan_icon_praise_selected@2x.png" alt="赞">
+      <b style="position: absolute; top: -1px; color: #333333; right: 0px; font-size: 16px;">赞</b>
+    </div>
+  </div>
+</div>
+<!--下划线-->
+<div class="underline_0"></div>
+<div class="Page_footer_box_userDivTopBox">
+  <div class="Page_footer_box_userDivTop">
+    <img class="title_img" src="image/userImage.jpg" alt="user">
+    <div class="Page_footer_box_userh1Span">
+      <h1>赛先生science</h1>
+      <span>来自West Lafayette,IN</span>
+    </div>
+    <div class="Page_footer_boxImgSpan">
+      <img class="Page_footer_zan" style="width: 22px;height: 22px; position: absolute; right: 20px;"
+           src="image/douquan_icon_praise_selected@2x.png" alt="赞">
+      <b style="position: absolute; top: -1px; color: #333333; right: 0px; font-size: 16px;">赞</b>
+    </div>
+  </div>
+</div>
+<div class="underline_0"></div>
+<div class="Page_footer_box_userDivTopBox">
+  <div class="Page_footer_box_userDivTop">
+    <img class="title_img" src="image/userImage.jpg" alt="user">
+    <div class="Page_footer_box_userh1Span">
+      <h1>赛先生science</h1>
+      <span>来自West Lafayette,IN</span>
+    </div>
+    <div class="Page_footer_boxImgSpan">
+      <img class="Page_footer_zan" style="width: 22px;height: 22px; position: absolute; right: 20px;"
+           src="image/douquan_icon_praise_selected@2x.png" alt="赞">
+      <b style="position: absolute; top: -1px; color: #333333; right: 0px; font-size: 16px;">赞</b>
+    </div>
+  </div>
+</div>
+<div class="underline_0"></div>
+<div class="Page_footer_box_userDivTopBox">
+  <div class="Page_footer_box_userDivTop">
+    <img class="title_img" src="image/userImage.jpg" alt="user">
+    <div class="Page_footer_box_userh1Span">
+      <h1>赛先生science</h1>
+      <span>来自West Lafayette,IN</span>
+    </div>
+    <div class="Page_footer_boxImgSpan">
+      <img class="Page_footer_zan" style="width: 22px;height: 22px; position: absolute; right: 20px;"
+           src="image/douquan_icon_praise_selected@2x.png" alt="赞">
+      <b style="position: absolute; top: -1px; color: #333333; right: 0px; font-size: 16px;">赞</b>
+    </div>
+  </div>
+</div>
+<div class="underline_0"></div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>活动详情页</title>
+  <link rel="stylesheet" href="detail_of_the_activity.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    ul,li{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script src="jquery-2.1.0.js"></script>
+  <script src="define.js"></script>
+  <script src="lf(1).js"></script>
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 750) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+</head>
+<body>
+<!--这是页头-->
+<div class="contentBox">
+  <img class="return_Img" src="image/icon_back_white@2x.png" alt="这个是返回标签">
+  <div class="background_Img1">
+    <img src="image/background_1.png" alt="这张是背景图">
+  </div>
+</div>
+<div class="main">
+  <div class="main_1div">
+    <div class="main_2div">2018马頔全美巡演Lafatette地区Sep, 17:30pm，火热预售中！</div>
+    <div class="main_3div">$400～$600</div>
+  </div>
+<!--11111-->
+  <div class="Page_footer_box_userDivTopBox">
+    <div class="Page_footer_box_userDivTop">
+      <img class="title_img" src="image/activity_time@2x.png" alt="user">
+      <div class="Page_footer_box_userh1Span">
+        <h1>2018.08.03~2018.08.04</h1>
+        <span>10:00:00~22:00:00</span>
+      </div>
+    </div>
+  </div>
+<!--222222-->
+  <div class="Page_footer_box_userDivTopBox">
+    <div class="Page_footer_box_userDivTop">
+      <img class="title_img" src="image/activity_address@2x.png" alt="user">
+      <div class="Page_footer_box_userh1Span">
+        <h1>The Forum</h1>
+        <span>West Manchester Boulevard</span>
+        <img class="fixed-right" onclick="javascript:getCurrentPosition();" src="image/activity_map@2x.png" alt="#">
+      </div>
+    </div>
+  </div>
+<!--33333-->
+  <div class="Page_footer_box_userDivTopBox">
+    <div class="Page_footer_box_userDivTop">
+      <img class="title_img" src="image/activity_host@2x.png" alt="user">
+      <div class="Page_footer_box_userh1Span">
+        <!--<span>11:11:11~22:22:22</span>-->
+        <div style="height:0.7rem;"></div>
+        <h1>PUCSSA</h1>
+
+      </div>
+    </div>
+  </div>
+  <!--这是一个border下线设外边距填充-->
+  <div class="main_top"></div>
+  <!--这是内容区域-->
+  <div class="title">活动详情</div>
+  <p>
+    史密斯)将首度降临中国北京，开启痛快感受世界巡演。2018年10月25日强势登陆凯迪拉克中心震撼开唱。本次演出由AEG亚洲携卓悦天合主办，更多巡演城市即将公布。
+  </p>
+  <img style="width:95%; height: 20rem; display: block; margin: auto;" src="image/background_2.png" alt="#">
+  <p>
+  <p>Sam Smith开启中国首演零距离感受灵动之音作为拥有超音乐才华与性感魅力的格莱美奥斯卡双料王，Sam Smith即将登陆中国，为等待已久的歌迷带来他在中国的首秀。这位游走于独特的灵动与感性的音乐神童,年纪尚轻便一举创造了格莱美四冠和全英音乐奖双冠的记录，他独特的嗓音魅力和创作才华也被中国粉丝所追捧。</p>
+  <!--这是内容区域虚线1px-->
+  <div class="main_top1"></div>
+  <div class="title">活动须知</div>
+  <!--这是活动须知内容块-->
+  <div class="Activity_content">
+    <ul class="Activity_content_ul">
+      <li>
+        <span>退换说明</span>
+        <div>票品不支持退换，如无法正常观看，还请自行处理，给您带来不便敬请谅解。</div>
+      </li>
+      <li>
+        <span>购票说明</span>
+        <div>
+          1.点击“立即购票”进入订单支付页面，选择活动日期、价格、人数，填写真实个人信息。
+          </br>
+          2.选票后，在15分钟内支付成功，购票生效。
+        </div>
+
+      </li>
+      <li>
+        <span>返兜分</span>
+        <div>
+          1.购买不同活动票品可获得消费金额×20%～60%比例的兜分返还。
+          </br>
+          2.您可以在积分商城兑换里程、周边、点券等商品。
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="title">猜你喜欢</div>
+  <!--5*540=2700px/21.8 =210rem -->
+  <div class="participation-box">
+    <ul class="participation-ul">
+      <li>
+        <img src="image/Activitybackground.jpg" alt="#">
+        <div class="img_wd" style="padding-top: 7px;">进行中</div>
+        <div class="img_td">已报名222人</div>
+        <div class="participation-div">2018马頔全美巡演Lafatette地区Sep,1 7:30pm</div>
+        <div class="participation-divbox">
+          <div style="width: 30px; height: 16px; border: 1px solid #E3464D; text-align: center; line-height: 16px; font-size: 11px;color: #E3464D;">活动</div>
+          <div style="font-size: 12px; color: #999999; margin-right: 55px;">PUCSSA</div>
+          <div style="font-size: 12px; color: #999999;">2018年7月29日截止</div>
+        </div>
+      </li>
+      <li>
+        <img src="image/Activitybackground.jpg" alt="#">
+        <div class="img_wd">进行中</div>
+        <div class="img_td">已报名222人</div>
+        <div class="participation-div">2018马頔全美巡演Lafatette地区Sep,1 7:30pm</div>
+        <div class="participation-divbox">
+          <div style="width: 30px; height: 16px; border: 1px solid #E3464D; text-align: center; line-height: 16px; font-size: 11px;color: #E3464D;">活动</div>
+          <div style="font-size: 12px; color: #999999; margin-right: 55px;">PUCSSA</div>
+          <div style="font-size: 12px; color: #999999;">2018年7月29日截止</div>
+        </div>
+      </li>
+      <li>
+        <img src="image/Activitybackground.jpg" alt="#">
+        <div class="img_wd"> 进行中</div>
+        <div class="img_td">已报名222人</div>
+        <div class="participation-div">2018马頔全美巡演Lafatette地区Sep,1 7:30pm</div>
+        <div class="participation-divbox">
+          <div style="width: 30px; height: 16px; border: 1px solid #E3464D; text-align: center; line-height: 16px; font-size: 11px;color: #E3464D;">活动</div>
+          <div style="font-size: 12px; color: #999999; margin-right: 55px;">PUCSSA</div>
+          <div style="font-size: 12px; color: #999999;">2018年7月29日截止</div>
+        </div>
+      </li>
+      <li>
+        <img src="image/Activitybackground.jpg" alt="#">
+        <div class="img_wd">进行中</div>
+        <div class="img_td">已报名222人</div>
+        <div class="participation-div">2018马頔全美巡演Lafatette地区Sep,1 7:30pm</div>
+        <div class="participation-divbox">
+          <div style="width: 30px; height: 16px; border: 1px solid #E3464D; text-align: center; line-height: 16px; font-size: 11px;color: #E3464D;">活动</div>
+          <div style="font-size: 12px; color: #999999; margin-right: 55px;">PUCSSA</div>
+          <div style="font-size: 12px; color: #999999;">2018年7月29日截止</div>
+        </div>
+      </li>
+      <li>
+        <img src="image/Activitybackground.jpg" alt="#">
+        <div class="img_wd">进行中</div>
+        <div class="img_td">已报名222人</div>
+        <div class="participation-div">2018马頔全美巡演Lafatette地区Sep,1 7:30pm</div>
+        <div class="participation-divbox">
+          <div style="width: 30px; height: 16px; border: 1px solid #E3464D; text-align: center; line-height: 16px; font-size: 11px;color: #E3464D;">活动</div>
+          <div style="font-size: 12px; color: #999999; margin-right: 55px;">PUCSSA</div>
+          <div style="font-size: 12px; color: #999999;">2018年7月29日截止</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--这是固定页尾-->
+<div class="fixed_bottom">立即购票</div>
+<script>
+
+    function getCurrentPosition(){
+      console.log('11111111111111111111111111111111111');
+      window.location.href = "https://www.baidu.com/sf?openapi=1&dspName=iphone&from_sf=1&pd=poi&pn=0&rn=10&nqt=s&resource_id=4255&word=%E7%BE%8E%E9%A3%9F&nwd=%E7%BE%8E%E9%A3%9F&title=%E5%91%A8%E8%BE%B9%E6%8E%A8%E8%8D%90&ext=%7B%22c%22%3A%22158%22%2C%22loc%22%3A%2212588937.96%2C3258581.88%22%2C%22ori_loc%22%3A%2212588937.96%2C3258581.88%22%2C%22poi_cityname%22%3A%22%E9%95%BF%E6%B2%99%E5%B8%82%22%2C%22b%22%3A%22(12583937.96%2C3253581.88%3B12593937.96%2C3263581.88)%22%2C%22target%22%3A%22%22%2C%22center%22%3A%22%22%2C%22type%22%3A%220%22%2C%22nwd%22%3A%22%E7%BE%8E%E9%A3%9F%22%2C%22source_city_code%22%3A%22%22%2C%22city_code%22%3A%22158%22%2C%22user_loc%22%3A%22%22%2C%22center_type%22%3A%22%22%2C%22sf_tab_name%22%3A%22%E7%BE%8E%E9%A3%9F%22%2C%22poi_tabs%22%3A%22%E7%BE%8E%E9%A3%9F%2C%E8%B4%AD%E7%89%A9%E4%B8%AD%E5%BF%83%2C%E7%94%B5%E5%BD%B1%E9%99%A2%2CKTV%2C%E6%8C%89%E6%91%A9%2C%E6%B4%97%E6%B5%B4%2C%E5%85%AC%E4%BA%A4%E7%AB%99%2C%E5%85%AC%E5%85%B1%E5%8E%95%E6%89%80%22%2C%22style_type%22%3A%22retract%22%7D&poi_type=beauty&hit_sid=&group=nearbykg&lid=9439077533273288605&referlid=9184360765351728402&ms=1&frsrcid=4145&frorder=2";
+    }
+
+    var Promise=new Promise(function(resolve,reject){});
+    console.log(Promise['then']&&Promise);
+
+    function random(x,y){
+      return Math.random(x)*y;
+    }
+
+    console.log(random(10,10));
+    console.log(random(11,11));
+    function randoms(x,y){
+      var s  = Math.random(x)*y;
+      return s;
+    }
+
+    console.log(randoms(12,12));
+    var obj={
+      randomss:function(x,y) {
+         return Math.random(x)*y;
+      }
+    }
+
+  console.log(obj.randomss(5,10));
+
+    var hs = function (x,y) {
+       console.log(Math.random(x)*y);
+    };
+    hs(111,111);
+</script>
+<script>
+  var params = {
+    phone: '13725236910'
+  }
+  lf.net.getJSON("http://120.79.163.179/mobile/problem/problemDetail", params, function (res) {
+//          成功回调
+//     console.log(res);
+    if (res.code == 200) {
+          console.log(res);
+    } else {
+
+    }
+  }, function (res) {
+//            失败回调
+    alert("失败");
+  });
+</script>
+</body>
+</html>

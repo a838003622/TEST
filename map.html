@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Hello, World</title>
+
+</head>
+
+<body>
+<input type="button" value="点我改变颜色" id="btn">
+<div class="div" id="div"></div>
+<script>
+  function ChangeColor(btnObj,divObj,attr){  //构造函数
+    this.btnObj = btnObj;          //获取元素btn
+    this.divObj = divObj;          //获取元素div
+    this.attr = attr;              //获取属性attr
+  }
+  ChangeColor.prototype.change = function(){         //函数原型下添加
+
+    var that = this;          //定义this变成that 改变this 指向
+    this.btnObj.onclick = function(){　　　　　　//创建点击响应函数　
+      console.log(11111111);　　　　　　　　　　　　//打映是否成功
+      for(var key in that.attr){　　　　　　　　　//ｆｏｒ　ｉｎ　循环　创建ｋｅｙ　获取构造函数内属性ａｔｔｒ
+        console.log(key,that.attr[key]);
+        that.divObj.style[key] = that.attr[key];　//这个元素的属性　＝　　构造函数内属性ａｔｔｒ
+      }
+
+    }
+  }
+  var btn1 = new ChangeColor(document.getElementById('btn'),document.getElementById("div"),{width:'300px',height:'300px',background:'#cccccc'});
+  btn1.change();
+</script>
+</body>
+</html>

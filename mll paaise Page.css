@@ -1,0 +1,77 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration:none;
+  color:#333;
+}
+h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+.topPraise{
+  position: relative;
+  height: 5rem;
+  border-bottom: 1px solid #EEEEEE;
+}
+.topSpan{
+  position: absolute;
+  left: 45%;
+  top: 32%;
+  font-size: 18px;
+  color: #666666;
+  letter-spacing:1px;
+}
+.topImage{
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1rem;
+}
+.Page_footer_box_userDivTopBox{
+  width: 95%;
+  margin: auto;
+  height: auto;
+}
+.Page_footer_box_userDivTop{
+  margin-top: 1.25rem;
+  display: flex;
+  position: relative;
+}
+.title_img{
+  margin-top: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+}
+.Page_footer_box_userh1Span{
+  margin-left: 10px;
+  width: auto;
+}
+.Page_footer_box_userh1Span h1{
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.Page_footer_box_userh1Span span{
+  font-size: 12px;
+  color: #888888;
+}
+.Page_footer_boxImgSpan{
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+.underline_0{
+  width: 86%;
+  margin:1.5rem 0 0 auto;
+  border-bottom: 1px solid #EEEEEE;
+}

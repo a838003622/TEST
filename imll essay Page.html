@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="imll%20essay%20Page.css">
+  <style>
+    html {
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      padding: 0;
+      color: #333333;
+    }
+
+    .Page_herad_box_Top {
+      margin-top: 2.5rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 2.5rem auto 0 auto;
+      width: 95%;
+    }
+
+    .Page_herad_box_Top_rdius {
+      width: 40px;
+      height: 40px;
+      /*border: 1px solid red;*/
+      border-radius: 50%;
+      margin-top: 3px;
+      position: absolute;
+      left: 10px;
+      /*background: red;*/
+      /*padding-left: 10px;*/
+    }
+
+    .Page_herad_box_Top_h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      color: #333333;
+      font-weight: normal;
+    }
+
+    .Page_herad_box_Top_font {
+      height: 20px;
+      width: auto;
+      font-size: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      position: absolute;
+      left: 60px;
+    }
+
+    .Page_herad_box_Top_span {
+      color: #888888;
+      height: 20px;
+      width: auto;
+      font-size: 10px;
+    }
+
+    .Page_herad_box_Top_button {
+      background: #E3464D;
+      color: #FFFFFF;
+      font-size: 15px;
+      border: none;
+      width: 70px;
+      border-radius: 5px;
+      position: absolute;
+      right: 10px;
+      height: 35px;
+      margin-top: 10px;
+    }
+
+    p {
+      text-align: justify;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #333333;
+      letter-spacing: 0.5px;
+      line-height: 25px;
+      width: 95%;
+      margin: 2.5rem auto 2.5rem auto;
+    }
+
+    .title {
+      /*font-family:fantasy;*/
+      letter-spacing: 1px;
+      padding: 0;
+      font-size: 16px;
+      /*font-weight: 600;*/
+      color: #333333;
+      /*font-family: "PingFang SC";*/
+      width: 95%;
+      height: 55px;
+      margin: 30px auto 16px auto;
+      /*width: 90%;*/
+    }
+
+    .title_h1 {
+      letter-spacing: 1px;
+      /*width: 342px;*/
+      height: 4.75rem;
+      color: #333333;
+      font-weight: 600;
+      /*text-align: center;*/
+      /*margin: auto;*/
+      font-size: 23px;
+      /*width: 90%;*/
+      /*width: 342px;*/
+      /*width: 100%;*/
+      /*height: 60px;*/
+    }
+
+    .report {
+      margin-bottom: 25px;
+      width: 100%;
+      height: 2rem;
+      position: relative;
+    }
+
+    .report div {
+      height: 2.25rem;
+      border-radius: 5px;
+      width: 5.95rem;
+      /*top: 20px;*/
+      position: absolute;
+      right: 10px;
+      background: #F1F1F1;
+      text-align: center;
+      line-height: 25px;
+    }
+
+    .like_direction {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .like_direction div {
+      width: 100px;
+      height: 37px;
+      border: 1px solid #DCDCDC;
+      border-radius: 20px;
+      margin: 0 20px 0 20px;
+      font-size: 18px;
+      /*text-align: center;*/
+      /*line-height: 3rem;*/
+      /*display: inline;*/
+      color: #888888;
+      font-size: 14px;
+      position: relative;
+    }
+  </style>
+
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+  <script src="imll%20essay%20Page.js"></script>
+</head>
+<body>
+<div style="width: 100%;">
+  <div style=" width: 29.3rem; height: 4.75rem; margin:1.25rem 1.55rem 0 1.1rem;text-align: justify;">
+    <h1 class="title_h1">英法将派舰巡南海刷存在感，暗示可能发生对抗</h1>
+  </div>
+  <div class="Page_herad_box_Top">
+    <div class="Page_herad_box_Top_rdius"><img style="width: 40px;height: 40px; border-radius: 50%;"
+                                               src="image/user.jpg" alt=""></div>
+    <div class="Page_herad_box_Top_font">
+      <h3 class="Page_herad_box_Top_h3">环球时报</h3>
+      <span class="Page_herad_box_Top_span">06-04 15:32</span>
+    </div>
+    <button class="Page_herad_box_Top_button">关注</button>
+  </div>
+  <div class="title">【环球网军事6月5日报道 环球时报注新加坡特约记者 XX 环球时报记者 陈某人】</div>
+  <p>
+    海外网6月29日电据香港东网报道，本周三（27日），伊朗宣布重启一座已经关闭九年的核电站，伊朗核子能机构随后确认，该命令是由伊朗最高领袖哈梅内伊发出。
+    另据今日俄罗斯报道，针对美国总统特朗普单方面退出伊核协议，并威胁盟友停止进口伊朗石油后，伊朗总统鲁哈尼周三(6月27日)表示会反抗美国制裁，并会“让美国屈服”。鲁哈尼说，“我们会面对问题，我们会承受压力，但我们绝不会牺牲独立自主的权利。”
+  </p>
+  <img style="width:95%; height: 20rem; display: block; margin: auto;" src="image/yl.jpg" alt="#">
+  <p>
+    自退出伊核协议来，美国曾多次对伊朗施加制裁。5月10日，美国财政部宣布，美方对6名伊朗人和3家实体实施制裁，冻结其在美国境内的资产，并禁止美国公民与其进行交易。5月15日，美国财政部又宣布对包括伊朗央行行长赛义夫在内的4名个人和1家实体实施制裁，称不会允许伊朗“日益滥用国际金融体系的行为”。5月21日，国务卿蓬佩奥称，美国将对伊朗施加“史上最强制裁”，并称伊朗将为“保持经济生存”而挣扎。
+  </p>
+  <img style="width:95%;; height: 20rem; display: block; margin: auto;" src="image/zt.jpg" alt="#">
+  <p>
+    伊核问题六国在2015年同伊朗签订协议，决定取消对伊制裁，而作为交换，伊朗的核项目受到限制。但特朗普对伊核协议的条款感到不满，他认为该协议对伊朗的制约有限。尽管联合国调查人员称伊朗并未违反协议，美国高级官员也多次表示伊朗在技术角度遵守了协议。（海外网张振）
+  </p>
+  <div class="report">
+    <div>
+      <img style="width: 11px;height: 1rem; position: absolute;left: 1.25rem;top: 0.6rem;" src="image/icon_举报@2x.png"
+           alt="#">
+      <span
+        style="width: 25px;height: 20px; display: inline-block; margin-bottom: 10px; font-size: 12px; position: absolute;top: 0; right: 1.2rem;">举报</span>
+    </div>
+  </div>
+  <!--<div class="like_direction">-->
+  <!--<div class="right">-->
+  <!--<img style="width: 19px;height: 16px; display: block;position: absolute; top: 1rem; left: 2rem;" src="image/love.png" alt="">-->
+  <!--<span>喜欢</span>-->
+  <!--</div>-->
+  <!--<div class="left">-->
+  <!--<img style="width: 16px;height: 14px; display: block;position: absolute; top: 1rem; left: 1.5rem;" src="image/nolove.png" alt="">-->
+  <!--<span>不喜欢</span>-->
+  <!--</div>-->
+  <!--</div>-->
+</div>
+
+<div class="Page_mid_box_content">
+  <ul>
+    <li>
+      <h1>留学生如何在美国办理结婚手续</h1>
+      <span>法说美国</span>
+      <a href="#111111111111111">
+        <img src="image/girls.jpg" alt="#" style="width: 114px; height: 80px; border-radius: 6px;">
+        <b class="isb"
+           style=" display: inline-block; position: absolute; right: 10px; bottom: 5px; color: white;">04:30</b>
+      </a>
+    </li>
+    <li>
+      <h1>留学生如何在美国办理结婚手续</h1>
+      <span>法说美国</span>
+      <a href="#">
+        <img src="image/girls.jpg" alt="#" style="width: 114px; height: 80px; border-radius: 6px;">
+        <b class="isb"
+           style=" display: inline-block; position: absolute; right: 10px; bottom: 5px; color: white;">04:30</b>
+      </a>
+    </li>
+    <li>
+      <h1>留学生如何在美国办理结婚手续</h1>
+      <span>法说美国</span>
+      <a href="#">
+        <img src="image/girls.jpg" alt="#" style="width: 114px; height: 80px; border-radius: 6px;">
+        <b class="isb"
+           style=" display: inline-block; position: absolute; right: 10px; bottom: 5px; color: white;">04:30</b>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!--footer 页面底层区域!!!!-->
+
+<div class="Page_footer_box">
+  <div class="Page_footer_box_userDiv">
+    <div class="Page_footer_box_userDivTop">
+      <img class="title_img" src="image/userImage.jpg" alt="user">
+      <div class="Page_footer_box_userh1Span">
+        <h1>赛先生science</h1>
+        <span>来自West Lafayette,IN</span>
+      </div>
+      <div class="Page_footer_boxImgSpan">
+        <img class="Page_footer_zan" style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+        <b id="Page_footer_zan_b">99</b>
+      </div>
+    </div>
+    <p>给我的感觉是昔日八国联军再出现！西方列强的无理和傲慢与偏见再次出现！对此，我们需要提高警惕～总之一句话～加强我们中国的军队现代化武器现代化，让我们国家更加强大！落后就要挨打，真理！落后就要挨打，真理！</p>
+    <div class="Page_footer_box_spanBtn">
+      <span style="color: #888888;">06-04 15:32</span>
+      <button>33回复</button>
+    </div>
+  </div>
+
+  <div class="Page_footer_box1">
+    <div class="Page_footer_box_userDiv">
+      <div class="Page_footer_box_userDivTop">
+        <img class="title_img" src="image/userImage.jpg" alt="user">
+        <div class="Page_footer_box_userh1Span">
+          <h1>赛先生science</h1>
+          <span>来自West Lafayette,IN</span>
+        </div>
+        <div class="Page_footer_boxImgSpan">
+          <img class="Page_footer_zan" style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+          <b id="Page_footer_zan_b1" style="position: absolute; top: 2px; color: #888888;">99</b>
+        </div>
+      </div>
+      <p>给我的感觉是昔日八国联军再出现！西方列强的无理和傲慢与偏见再次出现！对此，我们需要提高警惕～总之一句话～加强我们中国的军队现代化武器现代化，让我们国家更加强大！落后就要挨打，真理！落后就要挨打，真理！</p>
+      <div class="Page_footer_box_spanBtn">
+        <span style="color: #888888;">06-04 15:32</span>
+        <button>33回复</button>
+      </div>
+    </div>
+    <!--<div class="image_footer">-->
+
+    <!--<img class="image1_footer" src="image/details_icon_comments_normal@2x.png" alt="#">-->
+    <!--<img class="image2_footer" src="image/details_icon_Collection__selected@2x.png" alt="#">-->
+
+
+    <!--</div>-->
+  </div>
+</div>
+<div class="footerTab">这是页尾</div>
+
+<!--这是弹出框-->
+<div style="display: none" id="alertDiv">
+  <div class="alertDiv_top">
+    <!--<button id="returnBtn">X</button>-->
+    <img id="returnBtn" src="image/err.png" alt="err"
+         style="width: 25px;height: 25px; margin-top: 8px; margin-left: 4px;">
+    <h1>评论区</h1>
+  </div>
+  <ul>
+    <li>
+      <div class="Page_footer_box_userDivTop">
+        <img class="Page_footer_box_images" src="image/userImage.jpg" alt="user">
+        <div class="Page_footer_box_userh1Span">
+          <h1>赛先生science</h1>
+          <span>来自West Lafayette,IN</span>
+        </div>
+        <!--<span class="Page_footer_boxImgSpan"><img src="" alt="">关注</span>-->
+        <button class="Page_footer_box_Top_button">关注</button>
+      </div>
+      <p>清醒的时候放不下矜持，不敢说我喜欢你，只有在某个夜晚多愁善感又萦绕在心头，或是朋友聚会上的大醉，才敢借着情绪说，我喜欢你，喜欢了好久好久。</p>
+      <div class="span_div">
+        <span class="divspan">06-04-23:23</span>
+        <span class="divspan_2">举报</span>
+      </div>
+      <div class="span2_div">
+        <!--<span class="divSpan">n人赞过</span>-->
+        <a class="divSpan" href="imll%20praise%20Page.html">99999人赞过</a>
+        <span class="divSpan_2">
+                      <img style="width: 20px;height: 20px;" src="image/love.png" alt="赞">
+                      <b style="color: #888888; position: absolute; bottom:5px;">999</b>
+                    </span>
+      </div>
+    </li>
+
+
+    <li>
+      <div style="font-size: 18px; font-weight: 700; color: #000; margin-top: 1rem;">全部评论</div>
+      <div class="Page_footer_box_userDiv">
+        <div class="Page_footer_box_userDivTop">
+          <img class="Page_footer_box_images" src="image/userImage.jpg" alt="user">
+          <div class="Page_footer_box_userh1Span">
+            <h1>赛先生science</h1>
+            <span>来自West Lafayette,IN</span>
+          </div>
+          <span class="Page_footer_boxImgSpan">
+                        <img style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+                        <b style="color: #888888; position: absolute; bottom:5px;">99</b>
+                      </span>
+        </div>
+        <p>清醒的时候放不下矜持，不敢说我喜欢你，只有在某个夜晚多愁善感又萦绕在心头，或是朋友聚会上的大醉，才敢借着情绪说，我喜欢你，喜欢了好久好久。</p>
+        <div class="Page_footer_box_spanBtn_1">
+          <span>06-04 15:32</span>
+        </div>
+      </div>
+    <li>
+      <div class="Page_footer_box_userDiv">
+        <div class="Page_footer_box_userDivTop">
+          <img class="Page_footer_box_images" src="image/userImage.jpg" alt="user">
+          <div class="Page_footer_box_userh1Span">
+            <h1>赛先生science</h1>
+            <span>来自West Lafayette,IN</span>
+          </div>
+          <span class="Page_footer_boxImgSpan">
+                      <img style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+                      <b style="color: #888888; position: absolute; bottom:5px;">99</b>
+                    </span>
+        </div>
+        <p>清醒的时候放不下矜持，不敢说我喜欢你，只有在某个夜晚多愁善感又萦绕在心头，或是朋友聚会上的大醉，才敢借着情绪说，我喜欢你，喜欢了好久好久。</p>
+        <div class="Page_footer_box_spanBtn_1">
+          <span>06-04 15:32</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="Page_footer_box_userDiv">
+        <div class="Page_footer_box_userDivTop">
+          <img class="Page_footer_box_images" src="image/userImage.jpg" alt="user">
+          <div class="Page_footer_box_userh1Span">
+            <h1>赛先生science</h1>
+            <span>来自West Lafayette,IN</span>
+          </div>
+          <span class="Page_footer_boxImgSpan">
+                        <img style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+                      <b style="color: #888888; position: absolute; bottom:5px;">99</b>
+                      </span>
+        </div>
+        <p>清醒的时候放不下矜持，不敢说我喜欢你，只有在某个夜晚多愁善感又萦绕在心头，或是朋友聚会上的大醉，才敢借着情绪说，我喜欢你，喜欢了好久好久。</p>
+        <div class="Page_footer_box_spanBtn_1">
+          <span>06-04 15:32</span>
+        </div>
+      </div>
+    </li>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>兜圈</title>
+  <link rel="stylesheet" href="imll%20video%20Page.css">
+  <style>
+    html {
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+  <script src="imll%20video%20Page.js"></script>
+  <script src="http://mockjs.com/dist/mock.js"></script>
+</head>
+<body>
+<div class="Page_herad">
+  <div class="Page_herad_video">
+    <video id="video_s" controls width="100%" autoplay
+           src=""></video>
+  </div>
+
+  <div class="Page_herad_box">
+    <div class="Page_herad_box_Top">
+      <div class="Page_herad_box_Top_rdius"><img style="width: 32px;height: 32px; border-radius: 50%;"
+                                                 src="" alt=""></div>
+      <div class="Page_herad_box_Top_font">
+        <h3 class="Page_herad_box_Top_h3"></h3>
+        <span class="Page_herad_box_Top_span"></span>
+      </div>
+      <button class="Page_herad_box_Top_button">关注</button>
+    </div>
+    <div class="Page_herad_box_content">
+      <div class="Page_herad_box_content_strong"></div>
+      <div class="Page_herad_box_content_span"></div>
+    </div>
+    <div class="Page_herad_box_footer">
+      <ul>
+        <li>
+          <div style="width: 110px; height: 37px; position: relative;">
+            <img style="width: 22px; height: 22px;position: absolute;top: 8px;left: 25px;" src="image/love.png"
+                 alt="图1">
+            <b style="position: absolute; left: 55.5px; font-size: 14px; font-weight: 500;">999</b>
+          </div>
+        </li>
+        <li>
+          <div style="width: 110px; height: 37px; position: relative;">
+            <img style="width: 28px; height: 28px;position: absolute;top: 4px;left: 16px;" src="image/quan.png"
+                 alt="图2">
+            <b style="position: absolute; left: 50px;  font-size: 14px; font-weight: 500;">朋友圈</b>
+          </div>
+        </li>
+        <li>
+          <div style="width: 110px; height: 37px; position: relative;">
+            <img style="width: 28px; height: 28px;position: absolute;top: 4px;left: 19.5px;" src="image/wechat.png"
+                 alt="图3">
+            <b style="position: absolute; left: 55.5px; font-size: 14px; font-weight: 500;">微信</b>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="Page_mid_box_content">
+  <ul>
+    <li>
+      <h1></h1>
+      <span></span>
+      <a target="_blank" class="openVideo">
+        <img src="image/girls.jpg" alt="#" style="width: 114px; height: 80px; border-radius: 6px;">
+        <b class="isb"
+           style=" display: inline-block; position: absolute; right: 10px; bottom: 5px; color: white;">04:30</b>
+      </a>
+    </li>
+    <li>
+      <h1></h1>
+      <span>法说美国</span>
+      <a target="_blank" class="openVideo">
+        <img src="image/girls.jpg" alt="#" style="width: 114px; height: 80px; border-radius: 6px;">
+        <b class="isb"
+           style=" display: inline-block; position: absolute; right: 10px; bottom: 5px; color: white;">04:30</b>
+      </a>
+    </li>
+    <li>
+      <h1></h1>
+      <span></span>
+      <a target="_blank" class="openVideo">
+        <img src="image/girls.jpg" alt="#" style="width: 114px; height: 80px; border-radius: 6px;">
+        <b class="isb"
+           style=" display: inline-block; position: absolute; right: 10px; bottom: 5px; color: white;">04:30</b>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="Page_footer_box">
+  <div class="Page_footer_box_userDiv">
+    <div class="Page_footer_box_userDivTop">
+      <img class="Page_footer_box_images" src="" alt="user">
+      <div class="Page_footer_box_userh1Span">
+        <h1></h1>
+        <span></span>
+      </div>
+      <div class="Page_footer_boxImgSpan">
+        <img class="Page_footer_zan" style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+        <b id="Page_footer_zan_b" style="position: absolute; top: 4px; right: 4px; color: #888888">99</b>
+      </div>
+    </div>
+    <p></p>
+    <div class="Page_footer_box_spanBtn">
+      <span style="color: #888888;">06-04 15:32</span>
+      <button>11回复</button>
+    </div>
+  </div>
+  <div class="Page_footer_box1">
+    <div class="Page_footer_box_userDiv">
+      <div class="Page_footer_box_userDivTop">
+        <img class="Page_footer_box_images" src="" alt="user">
+        <div class="Page_footer_box_userh1Span">
+          <h1></h1>
+          <span></span>
+        </div>
+        <div class="Page_footer_boxImgSpan">
+          <img class="Page_footer_zan" style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+          <b id="Page_footer_zan_b1" style="position: absolute; top: 4px; right: 4px; color: #888888;">99</b>
+        </div>
+      </div>
+      <p></p>
+      <div class="Page_footer_box_spanBtn">
+        <span style="color: #888888;">06-04 15:32</span>
+        <button>11回复</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footerTab">这是页尾</div>
+<!--这是弹出框-->
+<div style="display: none" id="alertDiv">
+  <div class="alertDiv_top">
+    <!--<button id="returnBtn">X</button>-->
+    <img id="returnBtn" src="image/err.png" alt="err"
+         style="width: 25px;height: 25px; margin-top: 14px; margin-left: 4px;">
+    <h1>评论区</h1>
+  </div>
+  <ul>
+    <li>
+      <div class="Page_footer_box_userDivTop">
+        <img class="Page_footer_box_images" src="" alt="user">
+        <div class="Page_footer_box_userh1Span">
+          <h1></h1>
+          <span></span>
+        </div>
+        <!--<span class="Page_footer_boxImgSpan"><img src="" alt="">关注</span>-->
+        <button class="Page_footer_box_Top_button">关注</button>
+      </div>
+      <p></p>
+      <div class="span_div">
+        <span class="divspan">06-04-23:23</span>
+        <span class="divspan_2">举报</span>
+      </div>
+      <div class="span2_div">
+        <span class="divSpan">n人赞过</span>
+        <span class="divSpan_2">
+                      <img style="width: 20px;height: 20px;" src="image/love.png" alt="赞">
+                      <b style="color: #888888; position: absolute; bottom:5px;">999</b>
+                    </span>
+      </div>
+    </li>
+
+
+    <li>
+      <div style="font-size: 18px; font-weight: 700; color: #000; margin-top: 1rem;">全部评论</div>
+      <div class="Page_footer_box_userDiv">
+        <div class="Page_footer_box_userDivTop">
+          <img class="Page_footer_box_images" src="" alt="user">
+          <div class="Page_footer_box_userh1Span">
+            <h1></h1>
+            <span></span>
+          </div>
+          <span class="Page_footer_boxImgSpan">
+                        <img style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+                        <b style="color: #888888; position: absolute; bottom:5px;">99</b>
+                      </span>
+        </div>
+        <p></p>
+        <div class="Page_footer_box_spanBtn_1">
+          <span>06-04 15:32</span>
+        </div>
+      </div>
+    <li>
+      <div class="Page_footer_box_userDiv">
+        <div class="Page_footer_box_userDivTop">
+          <img class="Page_footer_box_images" src="" alt="user">
+          <div class="Page_footer_box_userh1Span">
+            <h1></h1>
+            <span></span>
+          </div>
+          <span class="Page_footer_boxImgSpan">
+                      <img style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+                      <b style="color: #888888; position: absolute; bottom:5px;">99</b>
+                    </span>
+        </div>
+        <p></p>
+        <div class="Page_footer_box_spanBtn_1">
+          <span>06-04 15:32</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="Page_footer_box_userDiv">
+        <div class="Page_footer_box_userDivTop">
+          <img class="Page_footer_box_images" src="" alt="user">
+          <div class="Page_footer_box_userh1Span">
+            <h1></h1>
+            <span></span>
+          </div>
+          <span class="Page_footer_boxImgSpan">
+              <img style="width: 20px;height: 20px;" src="image/dztb.png" alt="赞">
+              <b style="color: #888888; position: absolute; bottom:5px;">99</b>
+              </span>
+        </div>
+        <p></p>
+        <div class="Page_footer_box_spanBtn_1">
+          <span>06-04 15:32</span>
+        </div>
+      </div>
+    </li>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

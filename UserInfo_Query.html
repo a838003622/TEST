@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>query</title>
+  <script>
+    var fun = function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+          //可以根据实际需要修改
+          docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+    fun(document, window);
+  </script>
+  <style>
+    h1{
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+    html,body{
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .heradTou{
+      height: 20rem;
+      /*position: fixed;*/
+      /*top: 0;*/
+      width: 100%;
+    }
+    .content{
+      width: 80%;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      margin: 0 auto 0 auto;
+    }
+    .btncl{
+      width: 50%;
+      border-radius: 10px;
+      height: 3rem;
+      background: orange;
+      text-align: center;
+      line-height: 3rem;
+      margin: 5rem auto 0 auto;
+      display: block;
+      border: none;
+      font-size: 16px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <div class="heradTou"></div>
+    <div class="content">
+      <h1>数据异常，请重新加载</h1>
+    </div>
+    <button class="btncl">重新连接</button>
+</body>
+</html>

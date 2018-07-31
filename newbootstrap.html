@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .wrap {
+      width: 500px;
+      height: 50px;
+      background-color: #DAD699;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    input {
+      background-color: #D2BEF4;
+      width: 19%;
+      height: 90%;
+      border-radius: 5px;
+      margin-top: 2px;
+
+    }
+
+    .content {
+      width: 600px;
+      border: 2px solid;
+
+    }
+
+    .numtext {
+      width: 600px;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+  <div class="wrap">
+    <input type="button" value="添加">
+    <input type="button" value="删除">
+    <input type="button" value="大于0">
+    <input type="button" value="小于0">
+    <input type="button" value="刷新">
+  </div>
+  <div class="numtext"></div>
+</div>
+<img id="imgs" src="image/aixin.png" alt="#" width="32" height="32">
+<input type="button" onclick="showCurrentTime()" value="动态获取当前时间"><p>
+<div id="time"></div>
+</body>
+<script>
+  //获取元素
+  var inps = document.querySelectorAll("input");
+  console.log(inps);
+  var content = document.querySelector(".content");
+  console.log(content);
+  var numtext = document.querySelector(".numtext");
+  console.log(numtext);
+  //用来存储已经创建的元素
+  var numsArr = [];
+  //定义一个数组
+  var arr = ["-", "+"]
+  //添加的点击事件
+  inps[0].onclick = function () {
+    //创建box
+    var box = document.createElement("div");
+    //得到一个随机数
+    var num = parseInt(Math.random() * 100 + 1);
+    console.log(num);
+    //随机一个arr数组的的下标
+    var a = parseInt(Math.random() * 2);
+    console.log(a);
+
+    if (arr[a] == "-") {
+      num = Number(arr[a] + num);
+    }
+
+    //为box设置样式
+    box.style.width = "500px";
+    box.style.height = "100px";
+    box.style.backgroundColor = "#cccccc";
+    box.style.margin = "5px auto";
+    box.style.fontSize = "50px";
+    box.style.lineHeight = "100px";
+    box.style.textAlign = "center";
+
+    //把num写入box中
+    box.innerHTML += num;
+    //将box添加到numtext中
+    numtext.appendChild(box);
+    console.log(numtext);
+    //存储
+    // numsArr.push(box);
+    // console.log(numsArr.push(box));
+    // console.log(numsArr);
+
+  };
+  //删除的点击事件
+  inps[1].onclick = function () {
+    var a = numtext.lastElementChild;
+    if (numtext.hasChildNodes()) {
+      a.remove();
+      //删除数组中的最后一个
+      numsArr.pop();
+    }
+
+
+  }
+
+  //大于0的点击事件
+  inps[2].onclick = function () {
+    var nums = numtext.children;
+    console.log(nums);
+    for (var i = 0; i < nums.length; i++) {
+      if (nums[i].innerHTML < 0) {
+        nums[i].style.display = "none";
+      } else {
+        nums[i].style.display = "block";
+      }
+    }
+  }
+
+
+  // 小于0的点击事件
+  inps[3].onclick = function () {
+    var nums = numtext.children;
+    for (var i = 0; i < nums.length; i++) {
+      if (nums[i].innerHTML > 0) {
+        nums[i].style.display = "none";
+      } else {
+        nums[i].style.display = "block";
+      }
+    }
+  }
+
+  //刷新的点击事件
+  inps[4].onclick = function () {
+    var nums = numtext.children;
+    for (var i = 0; i < nums.length; i++) {
+      nums[i].style.display = "block";
+    }
+  };
+  let s = '𠮷a';
+  console.log(s);
+  for (let ch of s) {
+    console.log('ch:' + ch);
+    console.log(ch.codePointAt(0).toString(16));
+  }
+  ;
+
+  // setInterval(function () {
+  //   for(let i = 0; i<10; i++){
+  //       // return i;
+  //     alert(i);
+  //   }
+  // },1000);
+
+  function fn() {
+    return "Hello World";
+  }
+
+  `foo ${fn()} bar`;
+  var x;
+  console.log(typeof x == "" + undefined);
+  if (typeof x == "" + undefined) {
+    x = 111111111111;
+    y = false;
+    document.write(x);
+    if (y != true) {
+      x = 22222222;
+      document.write(x);
+    }
+  }
+  if (x == null) {
+    x = 10;
+    document.write(x);
+  }
+  // for(let i = 0; i<10; i++){
+  //   document.write("<h1>"+'这是i:'+i+"</h1>");
+  //   for(let j = 0 ; j<=i; j++){
+  //     document.write("<h1>"+'这是J:'+j+"</h1>");
+  //     console.log(i);
+  //     if(i==j){
+  //       console.log(j);
+  //     }
+  //   }
+  // }
+
+
+  function btn(bt, sum, txt, id) {
+    let px = "px";
+    let button = document.createElement(bt);
+    button.style.width = sum + px || auto;
+    button.style.height = sum + px || auto;
+    button.style.background = "black";
+    button.style.color = "white";
+    button.id = id;
+    let node = document.createTextNode(txt);
+    button.appendChild(node);
+    document.documentElement.appendChild(button);
+  }
+
+  btn("button", 80, "点击", "ys");
+
+  function cjDiv(od, sum) {
+    let px = "px";
+    let oDiv = document.createElement(od);
+    oDiv.style.width = sum + px || auto;
+    oDiv.style.height = sum + px || auto;
+    oDiv.style.background = "orange";
+    document.documentElement.appendChild(oDiv);
+  };
+  var ys = document.getElementById("ys");
+  console.log(ys);
+
+  function show(v) {
+    let msg = prompt("你好我是DJ有什么需要帮助的吗?请输入:", v);
+    console.log(v == "");
+    if (v !== "") {
+      window.location.href = 'http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=' + v + '';
+    }
+    ;
+  };
+  ys.onclick = function () {
+    cjDiv("p", 150);
+    cjDiv("div", 50);
+    btn("button", 80, "点击", "ys");
+    show("什么是开火车");
+  };
+  let sss = {
+    ss: "aaa",
+  };
+  // let ssss = sss.toString();
+  // console.log(ssss);
+  // console.log(screen.availHeight);
+  // console.log(screen.availWidth);
+  // console.log(screen.pixelDepth);
+
+  // var obj  = {
+  //   cjdiv:function(od,sum){
+  //     let px = "px";
+  //     let oDiv = document.createElement(od);
+  //     oDiv.style.width = sum+px||auto;
+  //     oDiv.style.height = sum+px||auto;
+  //     oDiv.style.background = "orange";
+  //     document.documentElement.appendChild(oDiv);
+  //   },
+  //   Btn:function(bt,sum,txt,id){
+  //     let px = "px";
+  //     let button = document.createElement(bt);
+  //     button.style.width = sum + px||auto;
+  //     button.style.height = sum + px||auto;
+  //     button.style.background = "black";
+  //     button.style.color = "white";
+  //     button.id = id;
+  //     let node = document.createTextNode(txt);
+  //     button.appendChild(node);
+  //     document.documentElement.appendChild(button);
+  //   },
+  // };
+  // obj.cjdiv("div",200);
+  // obj.Btn('button',200,'按钮','yss');
+  function timeout(ms) {
+    return new Promise((resolve, reject) => {
+      setTimeout(resolve, ms, 'ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss');
+    });
+  }
+
+  timeout(1000).then((value) => {
+    console.log(value);
+  });
+
+  let promise = new Promise(function (resolve, reject) {    //创建PROMISE
+    console.log('Promise');   //成功打印promise
+    resolve();           //表示成功
+  });
+  promise.then(function () {
+    console.log('resolved');         //打印成功
+  });
+  console.log('Hi!');              //全局打印hi
+
+
+  let doSomething = function () {
+    return new Promise((resolve, reject) => {
+      resolve('返回值');
+    });
+  };
+
+  let doSomethingElse = function () {
+    return '新的值';
+  };
+
+  doSomething().then(function () {
+    return doSomethingElse();
+  }).then(resp => {
+    console.warn(resp);
+    console.log('1 =========<');
+  });
+
+  doSomething().then(function () {
+    return doSomethingElse();
+  }).then(resp => {
+    console.warn(resp);
+    console.log('2 =========<');
+  });
+
+  doSomething().then(doSomethingElse()).then(resp => {
+    console.warn(resp);
+    console.warn('3 =========<');
+  });
+  let image = document.getElementById('imgs');
+
+  function bigImg() {
+    this.style.height = "64px";
+    this.style.width = "64px";
+  };
+
+  function little() {
+    this.style.height = "32px";
+    this.style.width = "32px";
+  }
+
+  // var big = bigImg();
+  image.onmouseenter = bigImg;
+  console.log(bigImg);
+  image.onmouseleave = little;
+  // 创建具有某些属性的对象
+  var myObject = new Object();
+  myObject.name = "James";
+  myObject.age = "22";
+  myObject.phone = "555 1234";
+
+  // 枚举（循环）对象的所有属性
+  for (prop in myObject)
+  {
+// 显示 "The property 'name' is James"，等等。
+    window.alert("The property '" + prop + "' is " + myObject[prop]);
+  }
+
+  // function test(a, b, c) {
+  //
+  //   console.log(a); // 函数体a
+  //   console.log(b);  // 20
+  //   function a() {
+  //     console.log(1);
+  //   }
+  //   var a = 100;
+  //   console.log(a);  // 100
+  //   var b = 2;
+  //   console.log(b); // 2
+  // }
+  // test(10,20,30);
+  //
+
+  function showCurrentTime()
+  {
+    var today = new Date();               //获取date对象
+    var year = today.getFullYear();       //date对象方法获取年份
+    var month = today.getMonth()+1;       //date对象方法获取月份
+    var date = today.getDate();           //date对象方法获取日子
+    var day = today.getDay();             //date对象方法获取星期几
+    var hours = today.getHours();         //date对象方法获取小时
+    var minutes	= today.getMinutes();     //date对象方法获取分钟
+    var seconds	= today.getSeconds();     //date对象方法获取秒
+    var milliseconds = today.getMilliseconds();   //date对象方法获取毫秒
+    for(let x in today){
+      console.log("这是x:"+x+"这是today[x]:"+today[x]);
+    }
+    switch(day){                         //switch 判断星期是否为true ;
+      case 0: week_str="星期日";break;         //如果是0 返回字符串 周末 星期日
+      case 1: week_str="星期一";break;         //如果是1 返回字符串 周末 星期1
+      case 2: week_str="星期二";break;         //如果是2 返回字符串 周末 星期2
+      case 3: week_str="星期三";break;         //如果是3 返回字符串 周末 星期3
+      case 4: week_str="星期四";break;         //如果是4 返回字符串 周末 星期4
+      case 5: week_str="星期五";break;         //如果是5 返回字符串 周末 星期5
+      default: week_str="星期六";              //如果是6 返回字符串 周末 星期6
+    }
+    //如果时间或日期值不够两位，补0
+    if(month<10)	month	= "0"+month;                  //如果月份小于10 则给它前面添加字符串"0"
+    if(date<10)		date	= "0"+date;                   //如果日子小于10 则给它前面添加字符串"0"
+    if(hours<10)	hours	= "0"+hours;                  //如果小时小于10 则给它前面添加字符串"0"
+    if(minutes<10)	minutes = "0"+minutes;            //如果分钟小于10 则给它前面添加字符串"0"
+    if(seconds<10)	seconds = "0"+seconds;            //如果秒钟小于10 则给它前面添加字符串"0"
+    //组合输出字符串
+    var str = year+"年"+month+"月"+date+"日 "+week_str;                       //创建变量str 以字符串形式拼接 year + 年 + month 月 + date  日 + week_str + "周几??"
+    str += "<br />"+hours+":"+minutes+":"+seconds+" "+milliseconds+"ms";     //换行 拼接时分秒 以及 毫秒
+    //将时间字符串，加入到id=time的元素中
+    var obj = document.getElementById("time");              //获取ID元素"time"
+    obj.innerHTML = str;                                    //输出id元素的innerHTML = 字符串
+    setTimeout("showCurrentTime()",1000);                   //创建定时器1S 调用函数showCurrentTime()
+  }
+
+
+</script>
+
+</html>
